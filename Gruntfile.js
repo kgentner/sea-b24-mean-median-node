@@ -4,7 +4,10 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     jshint: {
-      all: ["lib/*.js"]
+      all: ['lib/*.js'],
+      options:{
+        jshintrc :true
+      }
     },
 
     simplemocha: {
@@ -13,4 +16,4 @@ module.exports = function(grunt) {
   });
   grunt.registerTask('test', ['jshint', 'simplemocha']);
   grunt.registerTask('default', ['test']);
-}
+};
