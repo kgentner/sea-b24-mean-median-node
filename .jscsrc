@@ -1,4 +1,5 @@
 {
+  "preset":"airbnb",
   "validateQuoteMarks": true,
   "disallowMultipleVarDecl": true
 }
