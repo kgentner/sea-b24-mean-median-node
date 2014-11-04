@@ -4,22 +4,20 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-jscs');
   grunt.loadNpmTasks('grunt-simple-mocha');
+  grunt.loadNpmTasks('grunt-jscs');
 
   grunt.initConfig({
     jshint: {
       all: ['lib/*.js'],
-      options:{
+      options: {
         jshintrc: true
       }
     },
+
     jscs: {
-      all: {
-        options: {
-          standard: 'airbnb'
-        },
-        files: {
-          src: [ 'lib']
-        }
+      src: 'lib/**/*.js',
+      options: {
+        config: '.jscsrc'
       }
     },
 
@@ -27,6 +25,6 @@ module.exports = function(grunt) {
       src: ['test/**/*.js']
     }
   });
-  grunt.registerTask('test', ['jshint','jscs', 'simplemocha']);
+  grunt.registerTask('test', ['jshint', 'jscs', 'simplemocha']);
   grunt.registerTask('default', ['test']);
 };
