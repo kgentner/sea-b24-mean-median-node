@@ -31,5 +31,11 @@ node_modules
 # Eclipse or Webstorm junk
 workbench.xmi
 
-# Mac OS X junk
+#Mac OS X
 .DS_Store
+
+#Others
+build/
+bower_components
+test/test_bundle.js
+bundle.js
