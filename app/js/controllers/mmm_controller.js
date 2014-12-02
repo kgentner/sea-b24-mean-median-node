@@ -5,6 +5,7 @@ module.exports = function(app) {
 
     $scope.calcMMM = function() {
       var numArray = $scope.numInput.split(' ');
+      console.dir(numArray);
       $http({
         method: 'POST',
         url: '/api/mmm',
