@@ -2,7 +2,7 @@
   "name": "sea-b24-mean-median-mode",
   "version": "1.0.0",
   "description": "The base repo for sea-b24 mean, median and mode assignment",
-  "main": "index.js",
+  "main": "server.js",
   "directories": {
     "test": "test"
   },

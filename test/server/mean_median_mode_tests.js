@@ -11,7 +11,6 @@ describe('Mean Median & Mode', function() {
   it('should get accurate mean, median, and mode values', function(done) {
     chai.request('http://localhost:3000')
     .post('/api/mmm')
-    .type('form')
     .send({numList: [3, 5, 7, 9]})
     .end(function(err, res) {
       expect(err).to.eql(null);

@@ -39,3 +39,4 @@ build/
 bower_components
 test/test_bundle.js
 bundle.js
+client_bundle.js

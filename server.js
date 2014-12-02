@@ -8,8 +8,7 @@ var modeFunc = require('./app/js/mode');
 var app = express();
 
 app.use(express.static(__dirname + '/build'));
-app.use(bodyParser.urlencoded({ extended: true }));
-//app.use(bodyParser.json());
+app.use(bodyParser.json());
 
 app.post('/api/mmm', function(req, res) {
   var numArray = [];

@@ -10,16 +10,14 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     jshint: {
-      src: ['server.js', 'app/js/**/*.js', 'Gruntfile.js', 'test/client/*.js',
-      'test/server/*.js'],
+      src: ['server.js', 'app/js/**/*.js', 'Gruntfile.js', 'test/server/*.js'],
       options: {
         jshintrc: true
       }
     },
 
     jscs: {
-      src: ['server.js', 'app/js/**/*.js', 'Gruntfile.js',  'test/client/*.js',
-      'test/server/*.js'],
+      src: ['server.js', 'app/js/**/*.js', 'Gruntfile.js', 'test/server/*.js'],
       options: {
         config: '.jscsrc'
       }
@@ -51,19 +49,10 @@ module.exports = function(grunt) {
         options: {
           transform: ['debowerify']
         }
-      },
-
-      test: {
-        src: ['test/client/**/*test.js'],
-        dest:'test/test_bundle.js',
-        options:{
-          transform: ['debowerify']
-        }
       }
     }
   });
-  grunt.registerTask('test', ['jshint', 'jscs', 'simplemocha',
-    'browserify:test']);
+  grunt.registerTask('test', ['jshint', 'jscs', 'simplemocha']);
   grunt.registerTask('build:dev', ['clean:dev', 'browserify:dev', 'copy:dev']);
   grunt.registerTask('default', ['build:dev', 'test']);
 };
