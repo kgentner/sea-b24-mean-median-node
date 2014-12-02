@@ -1,4 +1,5 @@
 'use strict';
+/*thanks to Joe Elsey, Stephanie Lingwood, & Charles Renwick for help*/
 
 var express = require('express');
 var bodyParser = require('body-parser');
