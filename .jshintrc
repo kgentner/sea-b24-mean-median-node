@@ -10,7 +10,8 @@
     "after"      : false,
     "afterEach"  : false,
     "equal"      : false,
-    "angular"    : false
+    "angular"    : true,
+    "expect"     : true
   },
   "globalstrict": true,
   "quotmark": false,
