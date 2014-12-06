@@ -1,5 +1,5 @@
 'use strict';
-/*thanks to Joe Elsey, Stephanie Lingwood, & Charles Renwick for help*/
+/*thanks to S. Burbidge, J. Elsey, S. Lingwood, & C. Renwick for help*/
 
 module.exports = function(app) {
   app.controller('mmmCtrl', ['$scope', '$http', 'ResourceBackend',
@@ -13,9 +13,6 @@ module.exports = function(app) {
           $scope.mean = data.mean;
           $scope.median = data.median;
           $scope.mode = data.mode;
-        })
-        .error(function(data) {
-          console.log(data);
         });
       };
     }]);
