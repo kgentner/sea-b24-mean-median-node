@@ -41,3 +41,6 @@ test/test_bundle.js
 test/angular_testbundle.js
 bundle.js
 client_bundle.js
+mmm_controller_with_http.js
+resource_backend_service.js
+server_withpost.js
