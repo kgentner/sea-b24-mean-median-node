@@ -6,7 +6,8 @@ module.exports = function(app) {
     function($scope, mmmBuilder) {
 
       $scope.calcMMM = function() {
-        var data = mmmBuilder.buildMMM($scope.numInput.split(' '));
+        var numArray = $scope.numInput.split(' ');
+        var data = mmmBuilder.buildMMM(numArray);
         $scope.mean = data.mean;
         $scope.median = data.median;
         $scope.mode = data.mode;
