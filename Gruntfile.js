@@ -3,7 +3,6 @@
 module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-simple-mocha');
-  grunt.loadNpmTasks('grunt-jscs');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-browserify');
@@ -12,18 +11,10 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     jshint: {
-      src: ['server.js', 'app/js/**/*.js', 'Gruntfile.js', 'test/server/*.js',
-      'test/client/*.js'],
+      src: ['server.js', 'app/js/**/*.js', 'Gruntfile.js',
+      'test/server/*.js', 'test/client/*.js'],
       options: {
         jshintrc: true
-      }
-    },
-
-    jscs: {
-      src: ['server.js', 'app/js/**/*.js', 'Gruntfile.js', 'test/server/*.js',
-      'test/client/*.js'],
-      options: {
-        config: '.jscsrc'
       }
     },
 
@@ -86,7 +77,8 @@ module.exports = function(grunt) {
       }
     }
   });
-  grunt.registerTask('test', ['jshint', 'jscs', 'simplemocha']);
+
+  grunt.registerTask('test', ['jshint', 'simplemocha']);
   grunt.registerTask('test:client', ['browserify:test', 'karma:unit']);
   grunt.registerTask('build:dev', ['clean:dev', 'browserify:dev', 'copy:dev',
     'sass:dev']);
