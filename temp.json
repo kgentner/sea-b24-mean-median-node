@@ -1,0 +1,48 @@
+{
+    "name": "sea-b24-mean-median-mode",
+    "version": "1.0.0",
+    "description": "The base repo for sea-b24 mean, median and mode assignment",
+    "main": "server.js",
+    "directories": {
+      "test": "test"
+    },
+    "scripts": {
+      "test": "node_modules/grunt-cli/bin/grunt"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/codefellows/sea-b24-mean-median-mode.git"
+    },
+    "author": "tyler@codefellows.com",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/codefellows/sea-b24-mean-median-mode/issues"
+    },
+    "homepage": "https://github.com/codefellows/sea-b24-mean-median-mode",
+    "devDependencies": {
+      "chai": "4.1.2",
+      "chai-http": "3.0.0",
+      "debowerify": "1.5.0",
+      "grunt": "1.0.1",
+      "grunt-browserify": "5.2.0",
+      "grunt-cli": "1.2.0",
+      "grunt-contrib-clean": "1.1.0",
+      "grunt-contrib-copy": "1.0.0",
+      "grunt-contrib-jshint": "1.1.0",
+      "grunt-karma": "2.0.0",
+      "grunt-sass": "2.0.0",
+      "grunt-simple-mocha": "^0.4.1",
+      "jasmine-core": "^2.9.1",
+      "karma-chrome-launcher": "2.2.0",
+      "karma-firefox-launcher": "1.1.0",
+      "karma-jasmine": "1.1.1",
+      "karma-phantomjs-launcher": "1.0.4",
+      "mocha": "5.0.0"
+    },
+    "dependencies": {
+      "body-parser": "1.18.2",
+      "express": "4.16.2",
+      "karma": "^2.0.0",
+      "node-sass": "4.7.2"
+    }
+  }
