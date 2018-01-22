@@ -3,7 +3,6 @@
 module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-simple-mocha');
-  grunt.loadNpmTasks('grunt-jscs');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-browserify');
@@ -18,14 +17,6 @@ module.exports = function(grunt) {
         jshintrc: true
       }
     },
-
-    // jscs: {
-    //   src: ['server.js', 'app/js/**/*.js', 'Gruntfile.js',
-    //   'test/server/*.js', 'test/client/*.js'],
-    //   options: {
-    //     config: '.jscsrc'
-    //   }
-    // },
 
     simplemocha: {
       src: ['test/server/*.js']
