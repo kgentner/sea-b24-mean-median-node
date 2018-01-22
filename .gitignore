@@ -37,10 +37,7 @@ workbench.xmi
 #Others
 build/
 bower_components
-test/test_bundle.js
 test/angular_testbundle.js
 bundle.js
 client_bundle.js
-mmm_controller_with_http.js
-mmm_service_with_http.js
-server_withpost.js
+
