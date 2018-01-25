@@ -1,33 +1,33 @@
 'use strict';
 
 module.exports = function(config) {
-  config.set({
-    basePath: '',
+    config.set({
+        basePath: '',
 
-    frameworks: ['jasmine'],
+        frameworks: ['jasmine'],
 
-    files: [
-      'test/angular_testbundle.js'
-    ],
+        files: [
+            'test/angular_testbundle.js'
+        ],
 
-    exclude: [
-      '**/*.swp'
-    ],
+        exclude: [
+            '**/*.swp'
+        ],
 
-    preprocessors: {},
+        preprocessors: {},
 
-    reporters: ['progress'],
+        reporters: ['progress'],
 
-    port: 9876,
+        port: 9876,
 
-    colors: true,
+        colors: true,
 
-    logLevel: config.LOG_INFO,
+        logLevel: config.LOG_INFO,
 
-    autoWatch: false,
+        autoWatch: false,
 
-    browsers: ['PhantomJS'],
+        browsers: ['PhantomJS'],
 
-    singleRun: true
-  });
+        singleRun: true
+    });
 };

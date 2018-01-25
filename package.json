@@ -7,6 +7,9 @@
     "test": "test"
   },
   "scripts": {
+    "eslint-init": "eslint --init",
+    "eslint-fix": "eslint --fix .",
+    "lint": "eslint server.js, app/js/**/*.js, Gruntfile.js, test/server/*.js, test/client/*.js",
     "test": "node_modules/grunt-cli/bin/grunt"
   },
   "repository": {
@@ -23,12 +26,15 @@
     "chai": "4.1.2",
     "chai-http": "3.0.0",
     "debowerify": "1.5.0",
+    "eslint": "^4.16.0",
+    "eslint-config-angular": "^0.5.0",
+    "eslint-plugin-angular": "^3.2.0",
+    "eslint-plugin-jasmine": "^2.9.1",
     "grunt": "1.0.1",
     "grunt-browserify": "5.2.0",
     "grunt-cli": "1.2.0",
     "grunt-contrib-clean": "1.1.0",
     "grunt-contrib-copy": "1.0.0",
-    "grunt-contrib-jshint": "1.1.0",
     "grunt-karma": "2.0.0",
     "grunt-sass": "2.0.0",
     "grunt-simple-mocha": "^0.4.1",
