@@ -15,14 +15,15 @@ describe('mmmController', function() {
   }));
 
   it('should be able to create a controller', function() {
-    var mmmController = $controllerConstructor('mmmCtrl', {$scope: $scope});
+    var mmmController = $controllerConstructor('MmmController', {$scope: $scope});
+    
     expect(typeof mmmController).toBe('object');
   });
 
   describe('Mean, Median, Mode Functionality', function() {
 
     it('should invalidate non-numerical input', function() {
-      $controllerConstructor('mmmCtrl', {$scope: $scope});
+      $controllerConstructor('MmmController', {$scope: $scope});
       $scope.numInput = '3 5 7 y';
       $scope.calcMMM();
 
@@ -32,7 +33,7 @@ describe('mmmController', function() {
     });
 
     it('should display nothing when the input is an empty string', function() {
-      $controllerConstructor('mmmCtrl', {$scope: $scope});
+      $controllerConstructor('MmmController', {$scope: $scope});
       $scope.numInput = '';
       $scope.calcMMM();
 
@@ -42,7 +43,7 @@ describe('mmmController', function() {
     });
 
     it('should display numerical values with proper input', function() {
-      $controllerConstructor('mmmCtrl', {$scope: $scope});
+      $controllerConstructor('MmmController', {$scope: $scope});
       $scope.numInput = '3 5 7 9';
       $scope.calcMMM();
 

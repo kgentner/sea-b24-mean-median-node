@@ -10,11 +10,11 @@ require('../../server');
 describe('Mean Median & Mode Server', function() {
   it('should return html', function(done) {
     chai.request('http://localhost:3000')
-    .get('/')
-    .end(function(err, res) {
-      expect(err).to.eql(null);
-      expect(res.type).to.eql('text/html');
-      done();
-    });
+      .get('/')
+      .end(function(err, res) {
+        expect(err).to.eql(null);
+        expect(res.type).to.eql('text/html');
+        done();
+      });
   });
 });

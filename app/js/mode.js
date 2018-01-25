@@ -16,15 +16,15 @@ var mode = function(numArray) {
     for (var i = 0; i < numArray.length; i++) {
       var num = numArray[i];
 
-        //if num key is not in dict, then add it and set count value to 1
+      //if num key is not in dict, then add it and set count value to 1
       if (dict[num] == null) {
         dict[num] = 1;
       //if num key is in dict, then increment the count value
       } else {
         dict[num]++;
       }
-        //if count value of num is greater than maxCount
-        //then make num the mode and update maxCount
+      //if count value of num is greater than maxCount
+      //then make num the mode and update maxCount
       if (dict[num] > maxCount) {
         modeNum = num;
         maxCount = dict[num];

@@ -14,7 +14,7 @@ module.exports = function(app) {
             url: '/api/mmm',
             data: {numList: resource}
           })
-          .error(handleErrors);
+            .error(handleErrors);
         }
       };
     };

@@ -2,7 +2,7 @@
 /*thanks to S. Burbidge, J. Elsey, S. Lingwood, & C. Renwick for help*/
 
 module.exports = function(app) {
-  app.controller('mmmCtrl', ['$scope', 'mmmBuilder',
+  app.controller('MmmController', ['$scope', 'mmmBuilder',
     function($scope, mmmBuilder) {
 
       $scope.calcMMM = function() {
