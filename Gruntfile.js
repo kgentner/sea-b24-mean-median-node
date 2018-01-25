@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(grunt) {
-    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-eslint');
     grunt.loadNpmTasks('grunt-simple-mocha');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -10,6 +10,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-karma');
 
     grunt.initConfig({
+        eslint: {
+            target: ['server.js', 'app/js/**/*.js', 'Gruntfile.js',
+                'test/server/*.js', 'test/client/*.js'],
+            options: {
+                configFile: '.eslintrc.json',
+            }
+        },
         simplemocha: {
             src: ['test/server/*.js']
         },
@@ -69,7 +76,7 @@ module.exports = function(grunt) {
             }
         }
     });
-    grunt.registerTask('test', ['simplemocha']);
+    grunt.registerTask('test', ['eslint', 'simplemocha']);
     grunt.registerTask('test:client', ['browserify:test', 'karma:unit']);
     grunt.registerTask('build:dev', ['clean:dev', 'browserify:dev', 'copy:dev',
         'sass:dev']);

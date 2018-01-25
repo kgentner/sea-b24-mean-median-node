@@ -16,7 +16,7 @@ describe('mmmController', function() {
     }));
 
     it('should be able to create a controller', function() {
-        var mmmController = $controllerConstructor('mmmCtrl', {$scope: $scope});
+        var mmmController = $controllerConstructor('MmmController', {$scope: $scope});
         
         expect(typeof mmmController).toBe('object');
     });
@@ -34,7 +34,7 @@ describe('mmmController', function() {
         it('should invalidate non-numerical input', function() {
             $httpBackend.expectPOST('/api/mmm').respond(200, {mean: 'invalid input',
                 median: 'invalid input', mode: 'invalid input'});
-            $controllerConstructor('mmmCtrl', {$scope: $scope});
+            $controllerConstructor('MmmController', {$scope: $scope});
             $scope.numInput = '3 5 7 y';
             $scope.calcMMM();
             $httpBackend.flush();
@@ -47,7 +47,7 @@ describe('mmmController', function() {
         it('should display nothing when the input is an empty string', function() {
             $httpBackend.expectPOST('/api/mmm')
                 .respond(200, {mean: null, median: null, mode: null});
-            $controllerConstructor('mmmCtrl', {$scope: $scope});
+            $controllerConstructor('MmmController', {$scope: $scope});
             $scope.numInput = '';
             $scope.calcMMM();
             $httpBackend.flush();
@@ -60,7 +60,7 @@ describe('mmmController', function() {
         it('should display numerical values with proper input', function() {
             $httpBackend.expectPOST('/api/mmm')
                 .respond(200, {mean: 6, median: 6, mode: 3});
-            $controllerConstructor('mmmCtrl', {$scope: $scope});
+            $controllerConstructor('MmmController', {$scope: $scope});
             $scope.numInput = '3 5 7 9';
             $scope.calcMMM();
             $httpBackend.flush();

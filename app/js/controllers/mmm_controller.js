@@ -2,7 +2,7 @@
 /*thanks to Joe Elsey, Stephanie Lingwood, & Charles Renwick for help*/
 
 module.exports = function(app) {
-    app.controller('mmmCtrl', ['$scope', '$http', function($scope, $http) {
+    app.controller('MmmController', ['$scope', '$http', function($scope, $http) {
 
         $scope.calcMMM = function() {
             var numArray = $scope.numInput.split(' ');
